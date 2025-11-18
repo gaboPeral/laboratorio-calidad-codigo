@@ -15,7 +15,15 @@
     </properties>
 
     <dependencies>
-        <!-- Dependencias adicionales si se requiere (JUnit, etc.) -->
+        <!-- Dependencias adicionales si se requiere -->
+
+        <!-- JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -37,6 +45,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Plugin para ejecutar la clase Main -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -45,7 +55,6 @@
                     <mainClass>com.tecsup.labs.Main</mainClass>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
